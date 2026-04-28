@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mst. Shorifa Akter | Web Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a class="logo" href="#hero">SA</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="#about" onclick="closeMobile()">About</a></li>
+      <li><a href="#skills" onclick="closeMobile()">Skills</a></li>
+      <li><a href="#projects" onclick="closeMobile()">Projects</a></li>
+      <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-avatar">
+        <img src="assets/profile.jpg" alt="Mst. Shorifa Akter" onerror="this.style.display='none'; document.getElementById('avatar-initials').style.display='flex'" />
+        <div id="avatar-initials" class="avatar-initials">SA</div>
+      </div>
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Mst. Shorifa Akter</h1>
+      <div class="hero-roles">
+        <span class="role" id="roleText">Web Developer</span>
+      </div>
+      <p class="hero-quote">"Never Stop Learning"</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/Shorifa1234" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/shorifa-akter-46b309256" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://facebook.com/shorifa.afroz.5" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About <span>Me</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am a passionate <strong>Web Developer</strong> based in <strong>Mirpur, Dhaka, Bangladesh</strong>.
+            I specialize in building dynamic, full-featured web applications using <strong>PHP</strong>, <strong>Laravel</strong>,
+            and modern web technologies. I am continuously expanding my skill set — recently exploring
+            <strong>Python</strong> and <strong>AI Agent</strong> development.
+          </p>
+          <p>
+            From simple CRUD systems to full e-commerce platforms and hospital management solutions,
+            I love turning real-world problems into clean, working software.
+          </p>
+          <div class="about-info">
+            <div class="info-item"><i class="fas fa-map-marker-alt"></i> Mirpur, Dhaka, Bangladesh</div>
+            <div class="info-item"><i class="fas fa-envelope"></i> atsdatascraper@gmail.com</div>
+            <div class="info-item"><i class="fas fa-globe"></i>
+              <a href="https://shorifa.isdb-pwad.com/" target="_blank">shorifa.isdb-pwad.com</a>
+            </div>
+          </div>
+          <a href="https://github.com/Shorifa1234" target="_blank" class="btn btn-primary" style="margin-top:1.5rem">
+            <i class="fab fa-github"></i> View GitHub
+          </a>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number" data-target="25">0</span>
+            <span class="stat-label">GitHub Repositories</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="5">0</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="3">0</span>
+            <span class="stat-label">Years Learning</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="10">0</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">My <span>Skills</span></h2>
+      <p class="section-sub">Technologies I work with</p>
+      <div class="skills-grid">
+
+        <div class="skill-category">
+          <h3><i class="fas fa-server"></i> Backend</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-header"><span>PHP</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>Laravel</span><span>80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>Python</span><span>65%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>MySQL</span><span>80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-paint-brush"></i> Frontend</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-header"><span>HTML5</span><span>95%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>CSS3</span><span>85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>JavaScript</span><span>70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>Bootstrap</span><span>80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-tools"></i> Tools & Others</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-header"><span>Git & GitHub</span><span>80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>AJAX</span><span>70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>AI Agent Dev</span><span>60%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>REST API</span><span>72%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tech badges -->
+      <div class="tech-badges">
+        <span class="badge"><i class="fab fa-php"></i> PHP</span>
+        <span class="badge"><i class="fab fa-laravel"></i> Laravel</span>
+        <span class="badge"><i class="fab fa-python"></i> Python</span>
+        <span class="badge"><i class="fab fa-html5"></i> HTML5</span>
+        <span class="badge"><i class="fab fa-css3-alt"></i> CSS3</span>
+        <span class="badge"><i class="fab fa-js"></i> JavaScript</span>
+        <span class="badge"><i class="fab fa-github"></i> Git</span>
+        <span class="badge"><i class="fas fa-database"></i> MySQL</span>
+        <span class="badge"><i class="fas fa-robot"></i> AI Agents</span>
+        <span class="badge"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">My <span>Projects</span></h2>
+      <p class="section-sub">Things I've built</p>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-robot"></i></div>
+          <div class="project-content">
+            <span class="project-tag python">Python · AI</span>
+            <h3>AI Agent</h3>
+            <p>An intelligent AI agent built in Python that parses SKU and dimension data from product catalogs, featuring a dedicated UI for interaction.</p>
+            <div class="project-links">
+              <a href="https://github.com/Shorifa1234/AI_Agent" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+          <div class="project-content">
+            <span class="project-tag laravel">Laravel</span>
+            <h3>E-Commerce Site</h3>
+            <p>A full-featured e-commerce web application built with the Laravel framework, supporting product management, user authentication, and order processing.</p>
+            <div class="project-links">
+              <a href="https://github.com/Shorifa1234/ecommerce-site-laravel" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-hospital"></i></div>
+          <div class="project-content">
+            <span class="project-tag php">PHP</span>
+            <h3>Hospital Management System</h3>
+            <p>A comprehensive system to manage hospital operations — patients, doctors, appointments, and records — built with core PHP.</p>
+            <div class="project-links">
+              <a href="https://github.com/Shorifa1234/Hospital-management-system" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-book"></i></div>
+          <div class="project-content">
+            <span class="project-tag php">PHP · CSS</span>
+            <h3>Library Management System</h3>
+            <p>Software solution designed to efficiently manage library operations including book catalog, member management, and borrowing records.</p>
+            <div class="project-links">
+              <a href="https://github.com/Shorifa1234/library-management-system" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-users"></i></div>
+          <div class="project-content">
+            <span class="project-tag laravel">Laravel</span>
+            <h3>HRMS — HR Management System</h3>
+            <p>A Human Resource Management System built with Laravel to handle employee records, attendance, payroll, and departmental data.</p>
+            <div class="project-links">
+              <a href="https://github.com/Shorifa1234/HRMS_laravel" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-store"></i></div>
+          <div class="project-content">
+            <span class="project-tag php">PHP</span>
+            <h3>Shopping Cart</h3>
+            <p>Allows users to browse, select, and purchase products — a dynamic PHP-based shopping cart with session handling and cart management.</p>
+            <div class="project-links">
+              <a href="https://github.com/Shorifa1234/Shopping-cart-PHP" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-ticket-alt"></i></div>
+          <div class="project-content">
+            <span class="project-tag php">PHP</span>
+            <h3>Support Token System</h3>
+            <p>A support ticket/token system built in PHP that manages customer queries, assigns tokens, and tracks support status.</p>
+            <div class="project-links">
+              <a href="https://github.com/Shorifa1234/support-token-system" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-upload"></i></div>
+          <div class="project-content">
+            <span class="project-tag js">AJAX · PHP</span>
+            <h3>File Upload with AJAX</h3>
+            <p>A seamless file upload system using AJAX for real-time, no-page-refresh file uploads with PHP backend processing.</p>
+            <div class="project-links">
+              <a href="https://github.com/Shorifa1234/file-upload-ajax" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-lock"></i></div>
+          <div class="project-content">
+            <span class="project-tag laravel">Laravel</span>
+            <h3>Authentication System</h3>
+            <p>A complete user authentication system in Laravel featuring registration, login, password reset, and role-based access control.</p>
+            <div class="project-links">
+              <a href="https://github.com/Shorifa1234/Authentication_laravel" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="projects-footer">
+        <a href="https://github.com/Shorifa1234?tab=repositories" target="_blank" class="btn btn-outline">
+          <i class="fab fa-github"></i> See All 25+ Repositories
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <p class="section-sub">Let's work together</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Let's Connect!</h3>
+          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of something amazing.</p>
+          <div class="contact-links">
+            <a href="https://github.com/Shorifa1234" target="_blank" class="contact-link">
+              <i class="fab fa-github"></i>
+              <div><strong>GitHub</strong><span>github.com/Shorifa1234</span></div>
+            </a>
+            <a href="https://linkedin.com/in/shorifa-akter-46b309256" target="_blank" class="contact-link">
+              <i class="fab fa-linkedin"></i>
+              <div><strong>LinkedIn</strong><span>Shorifa Akter</span></div>
+            </a>
+            <a href="https://facebook.com/shorifa.afroz.5" target="_blank" class="contact-link">
+              <i class="fab fa-facebook"></i>
+              <div><strong>Facebook</strong><span>shorifa.afroz.5</span></div>
+            </a>
+            <a href="https://shorifa.isdb-pwad.com/" target="_blank" class="contact-link">
+              <i class="fas fa-globe"></i>
+              <div><strong>Website</strong><span>shorifa.isdb-pwad.com</span></div>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Subject" />
+          </div>
+          <div class="form-group">
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>Designed &amp; built by <strong>Mst. Shorifa Akter</strong></p>
+      <p class="footer-sub">© 2026 · "Never Stop Learning"</p>
+      <div class="footer-socials">
+        <a href="https://github.com/Shorifa1234" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/shorifa-akter-46b309256" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://facebook.com/shorifa.afroz.5" target="_blank"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
