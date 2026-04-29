@@ -24,7 +24,7 @@ window.addEventListener('scroll', () => {
 });
 
 // ===== ROLE TYPEWRITER =====
-const roles = ['Web Developer', 'PHP Developer', 'Laravel Developer', 'Python Developer', 'AI Enthusiast'];
+const roles = ['Web Developer', 'Python Developer', 'AI Automation Specialist'];
 let ri = 0, ci = 0, deleting = false;
 const roleEl = document.getElementById('roleText');
 
@@ -53,7 +53,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Add fade-in to key elements
 document.querySelectorAll(
-  '.about-text, .about-stats, .skill-category, .project-card, .contact-info, .contact-form, .stat-card'
+  '.about-text, .about-stats, .skill-category, .project-card, .contact-info, .contact-form, .stat-card, .timeline-card, .edu-card'
 ).forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
