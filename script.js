@@ -11,9 +11,9 @@
   resize();
   window.addEventListener('resize', resize);
 
-  const COLS1 = '#AACDDC';
-  const COLS2 = '#D2C4B4';
-  const COL_DIM = 'rgba(170,205,220,0.18)';
+  const COLS1 = '#6aab5e';
+  const COLS2 = '#c4843a';
+  const COL_DIM = 'rgba(106,171,94,0.18)';
 
   // ── MATRIX CODE RAIN ──
   const fontSize = 13;
@@ -74,7 +74,7 @@
         if (dist < 160) {
           const alpha = (1 - dist / 160) * 0.35;
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(170,205,220,${alpha})`;
+          ctx.strokeStyle = `rgba(106,171,94,${alpha})`;
           ctx.lineWidth = 1;
           ctx.moveTo(nodes[i].x, nodes[i].y);
           ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -86,7 +86,7 @@
           const py = nodes[i].y + (nodes[j].y - nodes[i].y) * t;
           ctx.beginPath();
           ctx.arc(px, py, 2, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(210,196,180,${alpha * 2})`;
+          ctx.fillStyle = `rgba(196,132,58,${alpha * 2})`;
           ctx.fill();
         }
       }
@@ -100,14 +100,14 @@
       // outer ring
       ctx.beginPath();
       ctx.arc(n.x, n.y, n.r + 4, 0, Math.PI * 2);
-      ctx.strokeStyle = `rgba(170,205,220,${glow * 0.25})`;
+      ctx.strokeStyle = `rgba(106,171,94,${glow * 0.25})`;
       ctx.lineWidth = 1;
       ctx.stroke();
 
       // core
       ctx.beginPath();
       ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(170,205,220,${glow * 0.8})`;
+      ctx.fillStyle = `rgba(106,171,94,${glow * 0.8})`;
       ctx.fill();
 
       // move
