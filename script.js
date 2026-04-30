@@ -175,10 +175,10 @@ const mobileMenu = document.getElementById('mobileMenu');
 hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
 function closeMobile() { mobileMenu.classList.remove('open'); }
 
-// ===== NAVBAR SCROLL SHADOW =====
+// ===== NAVBAR SCROLL =====
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('navbar');
-  nav.style.boxShadow = window.scrollY > 50 ? '0 4px 30px rgba(0,0,0,0.3)' : 'none';
+  nav.classList.toggle('scrolled', window.scrollY > 50);
 });
 
 // ===== SMOOTH ACTIVE NAV =====
@@ -190,7 +190,7 @@ window.addEventListener('scroll', () => {
     if (window.scrollY >= s.offsetTop - 120) current = s.id;
   });
   navLinks.forEach(a => {
-    a.style.color = a.getAttribute('href') === '#' + current ? '#a855f7' : '';
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
   });
 });
 
