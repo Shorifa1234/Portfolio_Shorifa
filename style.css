@@ -509,8 +509,9 @@ section { padding: 5rem 0; }
 /* Big card wrapper */
 .about-card {
   display: grid;
-  grid-template-columns: 1fr 1px 1fr 1px 1.1fr;
+  grid-template-columns: minmax(0,1.1fr) 1px minmax(0,1fr) 1px minmax(0,1.1fr);
   gap: 0;
+  align-items: stretch;
   background: var(--card);
   border: 1.5px solid var(--border);
   border-radius: 20px;
@@ -522,7 +523,7 @@ section { padding: 5rem 0; }
 .about-divider {
   background: var(--border);
   width: 1px;
-  min-height: 100%;
+  align-self: stretch;
 }
 
 /* Column 1: text */
@@ -531,26 +532,29 @@ section { padding: 5rem 0; }
   flex-direction: column;
   gap: 1.2rem;
   padding: 2.5rem 2rem;
+  min-width: 0;
 }
 
-/* Column 2: services */
+/* Column 3: services */
 .about-col-services {
   display: flex;
   flex-direction: column;
   gap: 0;
   padding: 1.5rem 1.8rem;
   justify-content: space-evenly;
+  min-width: 0;
 }
 
-/* Column 3: illustration */
+/* Column 2: illustration */
 .about-col-illus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1.8rem 1.5rem 1.5rem;
   gap: 1rem;
   background: #f8faff;
+  min-width: 0;
 }
 
 .about-label {
@@ -1152,13 +1156,15 @@ footer strong { color: var(--text); }
   .fc-label { font-size: 0.65rem; }
   .fc-icon { width: 28px; height: 28px; font-size: 0.8rem; }
 
-  /* ABOUT */
-  .about-card {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-  .about-divider { width: 100%; height: 1px; min-height: unset; }
-  .about-col-illus { background: #f8faff; }
+  /* ABOUT — keep horizontal on tablet, just reduce padding */
+  .about-card { grid-template-columns: minmax(0,1fr) 1px minmax(0,1fr) 1px minmax(0,1fr); }
+  .about-col-text { padding: 1.8rem 1.2rem; }
+  .about-col-services { padding: 1.2rem 1rem; }
+  .about-col-illus { padding: 1.2rem 1rem; }
+  .about-main-title { font-size: 1.4rem; }
+  .about-desc p { font-size: 0.85rem; }
+  .service-content h3 { font-size: 0.88rem; }
+  .service-content p { font-size: 0.78rem; }
   .about-stats { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
   .stat-card { padding: 1.2rem; }
   .stat-number { font-size: 1.8rem; }
