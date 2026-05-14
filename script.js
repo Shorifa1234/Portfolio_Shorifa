@@ -265,14 +265,40 @@ const aboutStats = document.querySelector('.about-stats');
 if (aboutStats) counterObserver.observe(aboutStats);
 
 // ===== CONTACT FORM =====
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
-  const btn = this.querySelector('button[type=submit]');
-  btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-  btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-  setTimeout(() => {
+  const btn = document.getElementById('submitBtn');
+  const success = document.getElementById('formSuccess');
+  const error = document.getElementById('formError');
+
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+  success.style.display = 'none';
+  error.style.display = 'none';
+
+  const formData = new FormData(this);
+  const data = Object.fromEntries(formData);
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const json = await res.json();
+
+    if (json.success) {
+      success.style.display = 'block';
+      this.reset();
+      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+    } else {
+      error.style.display = 'block';
+      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+    }
+  } catch {
+    error.style.display = 'block';
     btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-    btn.style.background = '';
-    this.reset();
-  }, 3000);
+  }
+
+  btn.disabled = false;
 });

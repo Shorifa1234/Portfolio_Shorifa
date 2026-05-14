@@ -539,21 +539,30 @@
       <p class="section-sub">Let's work together</p>
       <div class="contact-grid">
         <form class="contact-form" id="contactForm">
+          <input type="hidden" name="access_key" value="0cd45f5a-7057-4bd7-944e-37af9ae2bc9d" />
+          <input type="hidden" name="subject" value="New message from Portfolio Contact Form" />
+          <input type="hidden" name="from_name" value="Portfolio Contact" />
           <div class="form-group">
-            <input type="text" placeholder="Your Name" required />
+            <input type="text" name="name" placeholder="Your Name" required />
           </div>
           <div class="form-group">
-            <input type="email" placeholder="Your Email" required />
+            <input type="email" name="email" placeholder="Your Email" required />
           </div>
           <div class="form-group">
-            <input type="text" placeholder="Subject" />
+            <input type="text" name="subject_line" placeholder="Subject" />
           </div>
           <div class="form-group">
-            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width:100%">
+          <button type="submit" class="btn btn-primary" style="width:100%" id="submitBtn">
             <i class="fas fa-paper-plane"></i> Send Message
           </button>
+          <div id="formSuccess" style="display:none; margin-top:1rem; padding:1rem; background:#e8f5e3; border-radius:8px; color:#2e7d32; font-size:0.9rem; text-align:center;">
+            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+          </div>
+          <div id="formError" style="display:none; margin-top:1rem; padding:1rem; background:#fdecea; border-radius:8px; color:#c62828; font-size:0.9rem; text-align:center;">
+            <i class="fas fa-exclamation-circle"></i> Something went wrong. Please try again.
+          </div>
         </form>
       </div>
     </div>
