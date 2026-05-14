@@ -509,7 +509,7 @@ section { padding: 5rem 0; }
 /* Big card wrapper */
 .about-card {
   display: grid;
-  grid-template-columns: minmax(0,1.1fr) 1px minmax(0,1fr) 1px minmax(0,1.1fr);
+  grid-template-columns: minmax(0,1fr) 1px minmax(0,1fr) 1px minmax(0,1fr);
   gap: 0;
   align-items: stretch;
   background: var(--card);
@@ -1185,6 +1185,14 @@ footer {
   .hero-img-wrap img { width: 260px; height: 360px; }
 
   .about-grid { gap: 2.5rem; }
+  .about-col-text { padding: 2rem 1.4rem; }
+  .about-col-illus { padding: 1.5rem 1.2rem; }
+  .about-col-services { padding: 1.5rem 1.2rem; }
+  .about-main-title { font-size: clamp(1rem, 1.8vw, 1.3rem); }
+  .about-desc p { font-size: 0.78rem; }
+  .service-content h3 { font-size: 0.78rem; }
+  .service-content p { font-size: 0.7rem; }
+  .service-icon { width: 36px; height: 36px; font-size: 1rem; }
   .contact-grid { gap: 2.5rem; }
 
   .fc-top  { right: -10px; }
@@ -1238,15 +1246,20 @@ footer {
   .fc-label { font-size: 0.65rem; }
   .fc-icon { width: 28px; height: 28px; font-size: 0.8rem; }
 
-  /* ABOUT — keep horizontal on tablet, just reduce padding */
-  .about-card { grid-template-columns: minmax(0,1fr) 1px minmax(0,1fr) 1px minmax(0,1fr); }
-  .about-col-text { padding: 1.8rem 1.2rem; }
-  .about-col-services { padding: 1.2rem 1rem; }
-  .about-col-illus { padding: 1.2rem 1rem; }
+  /* ABOUT — stack vertically on mobile */
+  .about-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .about-divider { width: 100%; height: 1px; min-height: unset; }
+  .about-col-text { padding: 2rem 1.5rem; }
+  .about-col-illus { padding: 1.8rem 1.5rem; background: #f8faff; }
+  .about-col-services { padding: 1.8rem 1.5rem; }
   .about-main-title { font-size: 1.4rem; }
   .about-desc p { font-size: 0.85rem; }
   .service-content h3 { font-size: 0.88rem; }
   .service-content p { font-size: 0.78rem; }
+  .about-illus-img { max-width: 260px; margin: 0 auto; display: block; }
   .about-stats { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
   .stat-card { padding: 1.2rem; }
   .stat-number { font-size: 1.8rem; }
@@ -1312,9 +1325,9 @@ footer {
   .fc-bottom { bottom: 2px; right: 2px; }
 
   /* ABOUT */
-  .about-col-text, .about-col-services { padding: 1.5rem 1.2rem; }
-  .about-col-illus { padding: 1.2rem; }
-  .about-main-title { font-size: 1.5rem; }
+  .about-col-text, .about-col-services, .about-col-illus { padding: 1.2rem 1rem; }
+  .about-main-title { font-size: 1.2rem; }
+  .about-illus-img { max-width: 200px; }
   .about-stats { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
   .stat-number { font-size: 1.5rem; }
   .stat-label { font-size: 0.72rem; }
